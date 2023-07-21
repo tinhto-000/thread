@@ -656,7 +656,9 @@ namespace boost
 #else
         thread_data()
 #endif
+#ifndef __MVS__
         {}
+#endif
 
 #ifndef __MVS__
         bool operator==(const id& y) const BOOST_NOEXCEPT
